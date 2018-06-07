@@ -1,0 +1,109 @@
+@import "./common.scss";
+
+html,
+body {
+    height: 100%;
+} //轮播部分
+.top {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .main {
+        flex: 1;
+        background-color: skyblue;
+        .swiper-container {
+            // 这里一定要设置高度
+            height: 100%;
+            &>.swiper-wrapper {
+                padding-top: pr(45);
+                .swiper-slide {
+                    // 这里要设置父元素跟自己的高度,slide的高度小
+                    width: 100%;
+                    height: 100%;
+                    .swiper-container2 {
+                        height: 100%;
+                        padding-bottom: pr(45);
+                        position: relative;
+                        .swiper-wrapper {
+                            position: absolute;
+                            width:100%;
+                            height: 100%;                  
+                            .swiper-slide {
+                                height: auto;                             
+                            }
+                        }
+                    }
+                }
+            }
+            .swiper-pagination {
+                // 设置小圆点的高度,还有定位到顶部
+                height: pr(45);
+                position: fixed;
+                top: 0;
+                left: 0;
+                display: flex;
+                justify-content: space-around;
+                background-color: #fff;
+                .swiper-pagination-bullet {
+                    width: 30%;
+                    height: 100%;
+                    border-radius: 0;
+                    background-color: #fff; // display: inline-block;
+                    margin: 0px 0px;
+                    line-height: 100%;                   
+                   
+                    &:nth-child(1)::after {
+                        content: "关注";
+                        font-size: pr(18);
+                    }
+                    &:nth-child(2)::after {
+                        content: "订阅";
+                        font-size: pr(18);
+    
+                    }
+                }
+                // 不能直接加border,这个是在活动的时候自动加一个类名
+                .swiper-pagination-bullet-active {           
+                    border-bottom: 3px solid #a6e22d;
+                }
+            }
+        }
+    } //  占位
+    .bottom {
+        flex-basis: pr(50);
+    }
+} //  底部
+.container {
+    height: pr(50);
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: pink;
+    a {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        opacity: .5;
+        p {
+            font-size: pr(13);
+            margin: 0px 0px;
+        }
+        img {
+            height: pr(20);
+        }
+        &:nth-child(3) img {
+            height: pr(35);
+            opacity: 1;
+        }
+        // 高亮的时候加一个类名
+        &.active {
+            opacity: 1;
+        }
+    }
+}

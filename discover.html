@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./swiper/css/swiper.min.css">
+    <script src="./bootstrap-3.3.7-dist/js/jquery-3.1.1.min.js"></script>
+    <script src="./swiper/js/swiper.min.js"></script>
+    <script>
+        document.querySelector("html").style.fontSize = window.screen.width / 10 + "px";
+    </script>
+</head>
+
+<body>
+    <div class="top">
+        <div class="main">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                </div>
+                <!--下面的点 -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="bottom"></div>
+    </div>
+
+
+    <footer class="container">
+        <a href="./index.html"  >
+            <img src="./img/01-app-icons/tab_01.png" alt="">
+            <p>首页</p>
+        </a>
+        <a href="./discover.html" class="active">
+            <img src="./img/01-app-icons/tab_02.png" alt="">
+            <p>发现</p>
+        </a>
+        <a href="">
+            <img src="./img/01-app-icons/tab_camera.png" alt="">
+
+        </a>
+        <a href="./message.html">
+            <img src="./img/01-app-icons/tab_03.png" alt="">
+            <p>消息</p>
+        </a>
+        <a href="./profile.html">
+            <img src="./img/01-app-icons/tab_04.png" alt="">
+            <p>我的</p>
+        </a>
+    </footer>
+</body>
+
+</html>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+</script>

@@ -1,0 +1,39 @@
+@import "./common.scss";
+.list {
+    height: pr(80);
+    width: 100%;
+    .content {
+        padding: 0 pr(10);
+        height: 100%;
+        display: flex;
+        border-bottom: pr(1) solid #ccc;
+        justify-content: space-around;
+        align-items: center;
+        .left {
+            display: flex;
+            align-items: center;
+            // width: ;
+            img {
+                height: pr(40);
+                width: pr(40);
+                margin-right: pr(15);
+            }
+            .text {
+                .title {
+                    color: black;
+                }
+                .subtitle {
+                    color: #666;
+                }
+            }
+        }
+        .right {
+           border: 1px solid yellowgreen;
+           width: pr(60);
+           height:pr(40);
+           text-align: center;
+           line-height: pr(40);
+           border-radius: pr(15);
+        }
+    }
+}
